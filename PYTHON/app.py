@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, redirect, request, flash
+from flask import url_for, jsonify, json, render_template
 
 from data import Questions
 
@@ -15,6 +16,8 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+    
 
 @app.route('/questions')
 def questions():
