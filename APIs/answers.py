@@ -10,9 +10,10 @@ answers = [
     {'id': 3, 'answer': [{'ans_id':3,'answer':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis reprehenderit repellat tenetur ipsum beatae corrupti corporis natus a fuga illum harum accusantium laborum aspernatur, sequi, ut tempora nesciunt itaque.'}
 ]
 
+
 @app.route("/api/v1/questions/2/answers", methods=["POST"])
 
-def add_answer_to_question():
+def answer():
     """Adds answer to question."""
     answers = {
         "id": request.json["id"],

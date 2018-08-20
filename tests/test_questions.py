@@ -3,8 +3,7 @@ from flask import Flask,jsonify,make_response,request
 import sys
 import json
 
-from questions import app
-from APIs.questions.app import questions
+from APIs.questions import app, questions 
 
 
 
