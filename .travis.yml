@@ -1,18 +1,13 @@
 language: python
-
 python:
-    - "3.6"
-cache: 
-  pip
-
-install:
-  - pip install -r requirements.txt
-  - pip install coverage
-  - pip install coveralls
-  - pip install pytest
-
+- '3.6'
+before_script:
+- pip3 install -r requirements.txt
 script:
-  - pytest 
-
+- python -m pytest -v --cov tests --cov-report term-missing
 after_success:
 - coveralls
+deploy:
+  provider: heroku
+  api_key:
+secure: d540782d-19fd-4b6c-8f9c-b05926832523

@@ -1,3 +1,7 @@
+
+questions = []
+answers = []
+
 class Questions(object):
 
     def __init__(self, qnId,title, question, answer):
@@ -18,10 +22,9 @@ class Questions(object):
         return json_data
 
 class Answer(object):
-    def__init__(self, ansId, body)
-
-        self.ansId = ansId
-        self.body = body
+    def__init__(self,ansId,body)
+        self.ansId=ansId
+        self.body=body
 
 question1 = Question (1, "Github", "What is GitHub?")
 questions.append(question1)
