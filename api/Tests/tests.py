@@ -4,8 +4,8 @@ from copy import deepcopy
 import sys
 import json
 
-from api.v1.views import app
-from api.v1.data import questions
+from v1.views import app
+from v1.model import questions
 
 test_question1= {
                 'qnId':'1',

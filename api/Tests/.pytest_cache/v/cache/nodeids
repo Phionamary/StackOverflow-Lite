@@ -1,1 +1,6 @@
-[]
+[
+  "tests.py::QuestionsTestCase::test_api_can_get_all_questions",
+  "tests.py::QuestionsTestCase::test_api_can_get_question_by_id",
+  "tests.py::QuestionsTestCase::test_question_can_be_deleted",
+  "tests.py::QuestionsTestCase::test_question_creation"
+]

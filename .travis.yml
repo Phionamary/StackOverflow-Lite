@@ -1,17 +1,18 @@
 language: python
 
-python: 
+python:
     - "3.6"
-
-#install dependencies
-#before_install: cd qns_api
+cache: 
+  pip
 
 install:
-    - pip install -r requirements.txt
+  - pip install -r requirements.txt
+  - pip install coverage
+  - pip install coveralls
+  - pip install pytest
 
 script:
-    - pytest qns_api/tests --cov=qns_api/api --cov-report term-missing
-
+  - pytest 
 
 after_success:
 - coveralls

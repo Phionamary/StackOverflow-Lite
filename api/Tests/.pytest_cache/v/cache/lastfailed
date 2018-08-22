@@ -1,3 +1,7 @@
 {
-  "tests.py": true
+  "tests.py::QuestionsTestCase": true,
+  "tests.py::QuestionsTestCase::test_api_can_get_all_questions": true,
+  "tests.py::QuestionsTestCase::test_api_can_get_question_by_id": true,
+  "tests.py::QuestionsTestCase::test_question_can_be_deleted": true,
+  "tests.py::QuestionsTestCase::test_question_creation": true
 }
