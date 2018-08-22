@@ -56,6 +56,16 @@ def delete_question(qnId):
     questions.remove(question[0])
     return jsonify({}), 204
 
+@app.route("/api/v1/add_answer/<int:qnId>/answers", methods=["POST"])
+def add_answer_to_question(qnId):
+    """Adds answer to question."""
+    answers = {
+        "ansId": request.json["ansId"],
+        "answer": request.json["answer"]
+    }
+    questions["qnId"== qnId]["answer"].update(answers)
+    return jsonify(answers)
+
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -1,6 +1,7 @@
 [
   "tests.py::all_questions_test::test_API_can_create_new_questions",
   "tests.py::all_questions_test::test_API_get_one_question",
+  "tests.py::all_questions_test::test_add_answer_to_question",
   "tests.py::all_questions_test::test_delete_question",
   "tests.py::all_questions_test::test_get_all_questions"
 ]
