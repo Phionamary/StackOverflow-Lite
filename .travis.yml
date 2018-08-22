@@ -12,7 +12,8 @@ install:
     - pip install pytest-cov
     
 script:
-    py.test --cov-report= --cov=v1 tests/
+    - pytest 
+    - nosetests -v --with-coverage --cover-package=api
 
 after_success:
 - coveralls
