@@ -10,8 +10,11 @@ install:
     - pip install coverage
     - pip install coveralls
     - pip install pytest-cov
+    -pip install nose 
+    
 script:
-    py.test --cov-report= --cov=api tests/
+  pytest
+    - nosetests -v --with-coverage --cover-package=api
 
 after_success:
 - coveralls
