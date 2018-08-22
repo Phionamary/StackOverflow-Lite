@@ -10,13 +10,9 @@ install:
     - pip install coverage
     - pip install coveralls
     - pip install pytest-cov
-
-
-# command to run tests
+    
 script:
-   - nosetests --with-coverage --cover-package=app
-   - coverage report
-
+    py.test --cov-report= --cov=v1 tests/
 
 after_success:
-  - coveralls
+- coveralls
