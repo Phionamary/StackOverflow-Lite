@@ -155,6 +155,18 @@ boxes a:hover{
     font-weight: bold;
 }
 
+.footer {
+    color: #fff;
+    background-color: #333331;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
 
 
 
