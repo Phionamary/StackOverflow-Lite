@@ -3,7 +3,6 @@
   "tests.py::QuestionsTestCase::test_api_can_get_question_by_id": true,
   "tests.py::QuestionsTestCase::test_question_can_be_deleted": true,
   "tests.py::QuestionsTestCase::test_question_creation": true,
-  "tests.py::all_questions_test::test_API_get_one_question": true,
   "tests.py::all_questions_test::test_edit_a_question": true,
   "tests.py::all_questions_test::test_edit_an_entry": true,
   "tests.py::all_questions_test::test_get_one": true,

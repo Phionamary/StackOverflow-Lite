@@ -47,18 +47,6 @@ def post_question():
     questions.append(question)
     return jsonify({'question': question}), 201
 
-@app.route('/api/v1/edit_questions/<int:qnId>', methods=['PUT'])
-def edit_question(qnId):
-    question = get_question(qnId)
-    if len(question) == 0:
-        abort(404)
-    if not request.json:
-        abort(400)
-    title = request.json.get('title', question[0]['title'])
-    question = request.json.get('question', question[0]['question'])
-    question[0]['title'] = title
-    question[0]['question'] = question
-    return jsonify({'question': question[0]}), 200
 
 @app.route('/api/v1/delete_questions/<int:qnId>', methods=['DELETE'])
 def delete_question(qnId):
