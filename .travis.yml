@@ -5,12 +5,8 @@ python:
 cache:
     pip
 
-install:
-    - pip install -r requirements.txt
-    - pip install coverage
-    - pip install coveralls
-    - pip install pytest-cov
-    - pip install nose 
+before script:
+    - pip3 install -r requirements.txt
     
 script:
     - pytest 
