@@ -58,7 +58,7 @@ class all_questions_test(unittest.TestCase):
 
     #def test_add_answer_to_question(self):
         #test_user = app.test_client(self)
-       # test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
+        #test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
         #response = test_user.post("/api/v1/add_answer/1",content_type = 'application/json')
         #self.assertEquals(response.status_code, 201)
         #self.assertIn('question', str(response.data), msg='Answer added successfully')
