@@ -1,6 +1,6 @@
 from flask import Flask,jsonify,abort, make_response,request 
 
-from v1.model import questions
+from api.v1.model import questions
 
 
 NOT_FOUND = 'Not found'
