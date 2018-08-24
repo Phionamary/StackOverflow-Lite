@@ -56,12 +56,12 @@ class all_questions_test(unittest.TestCase):
         if 1 in ids:
             self.assertEqual(response.status_code, 200)
 
-    #def test_add_answer_to_question(self):
-        #test_user = app.test_client(self)
-        #test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
-        #response = test_user.post("/api/v1/add_answer/1",content_type = 'application/json')
-        #self.assertEquals(response.status_code, 201)
-        #self.assertIn('question', str(response.data), msg='Answer added successfully')
+    def test_add_answer_to_question(self):
+        test_user = app.test_client(self)
+        test_user.post('/api/v1/questions/<int:qnId>/answers',data=json.dumps(test_question1),content_type="application/json")
+        response = test_user.post("/api/v1/questions/1/answers",content_type = 'application/json')
+        self.assertEquals(response.status_code, 201)
+        self.assertIn('question', str(response.data), msg='Answer added successfully')
         
 
 # Make the tests conveniently executable
