@@ -31,12 +31,12 @@ class all_questions_test(unittest.TestCase):
     def test_get_all_questions(self):
         # Tests that all questions can be retrieved
         test_user = app.test_client(self)
-        response = test_user.get("/api/v1/get_questions", content_type="application/json")
+        response = test_user.get("/api/v1/questions", content_type="application/json")
         self.assertEqual(response.status_code,200)
 
     def test_API_can_create_new_questions(self):
         test_user=app.test_client(self)
-        response=test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
+        response=test_user.post('/api/v1/questions',data=json.dumps(test_question1),content_type="application/json")
         self.assertIn('question', str(response.data), msg="Question added successfully")
         self.assertEqual(response.status_code, 201)
 
@@ -44,14 +44,14 @@ class all_questions_test(unittest.TestCase):
         # Tests to show one  questions
         test_user = app.test_client(self)
         test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
-        response = test_user.get('/api/v1/get_question/1',content_type='application/json')
+        response = test_user.get('/api/v1/questions/1',content_type='application/json')
         self.assertIn('question', str(response.data))
         self.assertEqual(response.status_code, 200)
 
     def test_delete_question(self):
         test_user = app.test_client(self)
-        test_user.delete('/api/v1/delete_questions/<int:qnId>', data=json.dumps(test_question1), content_type="application/json")
-        response = test_user.delete('/api/v1/delete_questions/1')
+        test_user.delete('/api/v1/questions/<int:qnId>', data=json.dumps(test_question1), content_type="application/json")
+        response = test_user.delete('/api/v1/questions/1')
         ids = [question['qnId'] for question in questions]
         if 1 in ids:
             self.assertEqual(response.status_code, 200)
