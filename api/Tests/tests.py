@@ -43,7 +43,7 @@ class all_questions_test(unittest.TestCase):
     def test_API_get_one_question(self):
         # Tests to show one  questions
         test_user = app.test_client(self)
-        test_user.post('/api/v1/post_questions',data=json.dumps(test_question1),content_type="application/json")
+        test_user.post('/api/v1/questions',data=json.dumps(test_question1),content_type="application/json")
         response = test_user.get('/api/v1/questions/1',content_type='application/json')
         self.assertIn('question', str(response.data))
         self.assertEqual(response.status_code, 200)
